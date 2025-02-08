@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiSearch } from 'react-icons/fi';
+import Marquee from 'react-fast-marquee';
 
 // Fetch all food items
 const AllFoods = () => {
@@ -22,13 +23,13 @@ const AllFoods = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 mt-3">
       {/* Page Title */}
       <div
-        className="relative h-[250px] bg-cover bg-center flex justify-center items-center  text-4xl font-bold"
-        style={{ backgroundImage: "url('/your-banner-image.jpg')" }}
+        className="relative h-[250px] bg-cover bg-center flex justify-center items-center  text-6xl font-bold text-white"
+        style={{ backgroundImage: "url('/public/different_foods.jpg')" }}
       >
-        All Foods
+        <Marquee> 🍕 All Foods below , Please choose your favorite.🍔 </Marquee>
       </div>
 
       {/* Search Bar */}

@@ -11,7 +11,7 @@ const FoodPurchasePage = () => {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/food/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/foods/${id}`)
       .then(res => res.json())
       .then(data => setFood(data))
       .catch(() => toast.error('Failed to load food details'));
