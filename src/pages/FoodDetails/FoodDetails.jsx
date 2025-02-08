@@ -1,27 +1,29 @@
 import { useState } from 'react';
 import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const FoodDetails = () => {
   const { id } = useParams();
   console.log(id);
   const food = useLoaderData();
   console.log(food);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [purchaseCount, setPurchaseCount] = useState(0);
   const handlePurchase = () => {
     setPurchaseCount(purchaseCount + 1);
-    // navigate(`/purchase/${food._id}`); // Redirect to purchase page
+
+    navigate(`/purchase/${food._id}`); // Redirect to purchase page
   };
   // http://localhost:5173/food/67a62f9542c8c857e1fc5c47
 
   // Handle case where food item is not found
-  // if (!food) {
-  //   return (
-  //     <div className="text-center text-red-500 text-xl mt-10">
-  //       Food item not found!
-  //     </div>
-  //   );
-  // }
+  if (!food) {
+    return (
+      <div className="text-center text-red-500 text-xl mt-10">
+        Food item not found!
+      </div>
+    );
+  }
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
@@ -35,7 +37,7 @@ const FoodDetails = () => {
         <p className="text-gray-600 mt-2">{food.description}</p>
         <div className="flex justify-between items-center mt-4">
           <span className="text-xl font-semibold text-gray-800">
-            ${food.price}
+            Price: ${food.price}
           </span>
           <span className="text-gray-500">Available: {food.quantity}</span>
         </div>

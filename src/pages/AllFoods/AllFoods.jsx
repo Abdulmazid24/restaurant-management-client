@@ -66,7 +66,7 @@ const AllFoods = () => {
                   ${food.price}
                 </span>
                 <Link
-                  to={`/food/${food._id}`}
+                  to={`/foods/${food._id}`}
                   className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
                 >
                   Details
