@@ -1,0 +1,213 @@
+[
+  {
+    "name": "Margherita Pizza",
+    "description": "Classic Italian pizza with fresh basil, mozzarella, and tomato sauce.",
+    "price": 12.99,
+    "quantity": 15,
+    "image": "https://i.ibb.co/R1c30vG/Margherita-Pizza.jpg"
+  },
+  {
+    "name": "Spaghetti Carbonara",
+    "description": "Creamy pasta dish with bacon, eggs, cheese, and black pepper.",
+    "price": 10.99,
+    "quantity": 20,
+    "image": "https://i.ibb.co/bjPnMqxF/Spaghetti-Carbonara.jpg"
+  },
+  {
+    "name": "Cheeseburger",
+    "description": "Juicy beef patty with melted cheese, lettuce, tomato, and pickles.",
+    "price": 9.99,
+    "quantity": 25,
+    "image": "https://i.ibb.co/67BgFZyP/Cheeseburger.jpg"
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Crisp romaine lettuce, parmesan cheese, croutons, and Caesar dressing.",
+    "price": 7.99,
+    "quantity": 30,
+    "image": "https://i.ibb.co/tMkMqsWT/Caesar-Salad.jpg"
+  },
+  {
+    "name": "Grilled Salmon",
+    "description": "Perfectly grilled salmon with lemon butter sauce and veggies.",
+    "price": 15.99,
+    "quantity": 10,
+    "image": "https://i.ibb.co/JwmRjm7J/Grilled-Salmon.jpg"
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "description": "Delicious molten chocolate cake with vanilla ice cream.",
+    "price": 6.99,
+    "quantity": 18,
+    "image": "https://i.ibb.co/Y7MTntG7/Chocolate-Lava-Cake.jpg"
+  },
+  {
+    "name": "Sushi Platter",
+    "description": "Assorted sushi rolls with fresh fish and wasabi.",
+    "price": 22.99,
+    "quantity": 12,
+    "image": "https://i.ibb.co/HpP4pz2X/Sushi-Platter.jpg"
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "description": "Spiced and creamy tomato curry with tender chicken pieces.",
+    "price": 13.99,
+    "quantity": 20,
+    "image": "https://i.ibb.co/jZsRf5wj/Chicken-Tikka-Masala.jpg"
+  },
+  {
+    "name": "French Fries",
+    "description": "Crispy golden fries served with ketchup.",
+    "price": 4.99,
+    "quantity": 40,
+    "image": "https://i.ibb.co/spjJHm4/French-Fries.jpg"
+  },
+  {
+    "name": "Tandoori Chicken",
+    "description": "Indian spiced chicken roasted in a tandoor oven.",
+    "price": 14.99,
+    "quantity": 16,
+    "image": "https://i.ibb.co/Sw6BpQk/Tandoori-Chicken.jpg"
+  },
+
+  {
+    "name": "Pepperoni Pizza",
+    "description": "Classic pizza topped with spicy pepperoni and mozzarella cheese.",
+    "price": 13.99,
+    "quantity": 20,
+    "image": "https://i.ibb.co.com/CsWG0222/Pepperoni-Pizza.jpg"
+  },
+  {
+    "name": "Veggie Burger",
+    "description": "A healthy plant-based burger with fresh veggies and special sauce.",
+    "price": 10.49,
+    "quantity": 18,
+    "image": "https://i.ibb.co.com/4RzXvBwD/Veggie-Burger.jpg"
+  },
+  {
+    "name": "BBQ Chicken Wings",
+    "description": "Tender chicken wings glazed with smoky BBQ sauce.",
+    "price": 9.99,
+    "quantity": 25,
+    "image": "https://i.ibb.co.com/QvCXwKcG/BBQ-Chicken-Wings.jpg"
+  },
+  {
+    "name": "Pasta Alfredo",
+    "description": "Creamy fettuccine pasta with a rich Alfredo sauce.",
+    "price": 11.99,
+    "quantity": 22,
+    "image": "https://i.ibb.co.com/d4RZyYg0/Pasta-Alfredo.jpg"
+  },
+  {
+    "name": "Greek Salad",
+    "description": "Fresh cucumbers, tomatoes, olives, and feta cheese with olive oil.",
+    "price": 7.49,
+    "quantity": 30,
+    "image": "https://i.ibb.co.com/J1jjm5K/Greek-Salad.jpg"
+  },
+  {
+    "name": "Shrimp Tempura",
+    "description": "Crispy deep-fried shrimp served with dipping sauce.",
+    "price": 14.99,
+    "quantity": 15,
+    "image": "https://i.ibb.co.com/zHVfVtQm/Shrimp-Tempura.jpg"
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Italian risotto cooked with mushrooms and Parmesan cheese.",
+    "price": 13.49,
+    "quantity": 20,
+    "image": "https://i.ibb.co.com/bwHCXgS/Mushroom-Risotto.jpg"
+  },
+  {
+    "name": "Buffalo Wings",
+    "description": "Spicy buffalo wings served with ranch dressing.",
+    "price": 10.99,
+    "quantity": 28,
+    "image": "https://i.ibb.co.com/LXjFw14v/Buffalo-Wings.jpg"
+  },
+  {
+    "name": "Teriyaki Chicken",
+    "description": "Japanese-style grilled chicken with teriyaki sauce.",
+    "price": 12.49,
+    "quantity": 17,
+    "image": "https://i.ibb.co.com/Y7GwXwQX/Teriyaki-Chicken.jpg"
+  },
+  {
+    "name": "Lamb Chops",
+    "description": "Grilled lamb chops served with rosemary sauce.",
+    "price": 19.99,
+    "quantity": 12,
+    "image": "https://i.ibb.co.com/XZLkw76d/Lamb-Chops.jpg"
+  },
+  {
+    "name": "Garlic Bread",
+    "description": "Toasted bread with garlic butter and herbs.",
+    "price": 4.99,
+    "quantity": 40,
+    "image": "https://i.ibb.co.com/XfsMxxHm/Garlic-Bread.jpg"
+  },
+  {
+    "name": "Strawberry Cheesecake",
+    "description": "Rich cheesecake topped with fresh strawberries.",
+    "price": 8.99,
+    "quantity": 22,
+    "image": "https://i.ibb.co.com/23nYnkhh/Strawberry-Cheesecake.jpg"
+  },
+  {
+    "name": "Egg Fried Rice",
+    "description": "Fried rice with eggs, veggies, and soy sauce.",
+    "price": 6.99,
+    "quantity": 35,
+    "image": "https://i.ibb.co/HgYDL0X/Egg-Fried-Rice.jpg"
+  },
+  {
+    "name": "Beef Steak",
+    "description": "Juicy grilled beef steak with mashed potatoes.",
+    "price": 21.99,
+    "quantity": 10,
+    "image": "https://i.ibb.co/wdMv9Y4/Beef-Steak.jpg"
+  },
+  {
+    "name": "Chicken Biryani",
+    "description": "Spiced rice dish with tender chicken pieces.",
+    "price": 12.99,
+    "quantity": 24,
+    "image": "https://i.ibb.co/Bc6VsmM/Chicken-Biryani.jpg"
+  },
+  {
+    "name": "Fish Tacos",
+    "description": "Crispy fish fillets served in soft tortillas with slaw.",
+    "price": 9.49,
+    "quantity": 18,
+    "image": "https://i.ibb.co/8XP7rmj/Fish-Tacos.jpg"
+  },
+  {
+    "name": "Lobster Bisque",
+    "description": "Creamy lobster soup with a hint of sherry.",
+    "price": 14.99,
+    "quantity": 8,
+    "image": "https://i.ibb.co/1Lf6F6K/Lobster-Bisque.jpg"
+  },
+  {
+    "name": "Peking Duck",
+    "description": "Chinese-style roasted duck with hoisin sauce.",
+    "price": 23.99,
+    "quantity": 5,
+    "image": "https://i.ibb.co/6rtnVqQ/Peking-Duck.jpg"
+  },
+  {
+    "name": "Vegetable Spring Rolls",
+    "description": "Crispy spring rolls filled with vegetables.",
+    "price": 5.99,
+    "quantity": 50,
+    "image": "https://i.ibb.co/mBsm2fM/Vegetable-Spring-Rolls.jpg"
+  },
+  {
+    "name": "Tiramisu",
+    "description": "Classic Italian coffee-flavored dessert with mascarpone cheese.",
+    "price": 7.99,
+    "quantity": 20,
+    "image": "https://i.ibb.co/TMvWRgF/Tiramisu.jpg"
+  }
+]

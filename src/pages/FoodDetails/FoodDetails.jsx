@@ -1,0 +1,58 @@
+import { useState } from 'react';
+import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
+
+const FoodDetails = () => {
+  const { id } = useParams();
+  console.log(id);
+  const food = useLoaderData();
+  console.log(food);
+  // const navigate = useNavigate();
+  const [purchaseCount, setPurchaseCount] = useState(0);
+  const handlePurchase = () => {
+    setPurchaseCount(purchaseCount + 1);
+    // navigate(`/purchase/${food._id}`); // Redirect to purchase page
+  };
+  // http://localhost:5173/food/67a62f9542c8c857e1fc5c47
+
+  // Handle case where food item is not found
+  // if (!food) {
+  //   return (
+  //     <div className="text-center text-red-500 text-xl mt-10">
+  //       Food item not found!
+  //     </div>
+  //   );
+  // }
+
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+      <div className="bg-white shadow-2xl rounded-xl p-6 max-w-2xl w-full text-center">
+        <img
+          src={food.image}
+          alt={food.name}
+          className="w-full h-60 object-cover rounded-lg shadow-md"
+        />
+        <h2 className="text-3xl font-bold mt-4 text-gray-800">{food.name}</h2>
+        <p className="text-gray-600 mt-2">{food.description}</p>
+        <div className="flex justify-between items-center mt-4">
+          <span className="text-xl font-semibold text-gray-800">
+            ${food.price}
+          </span>
+          <span className="text-gray-500">Available: {food.quantity}</span>
+        </div>
+        <div className="mt-4">
+          <span className="text-gray-700 font-semibold">
+            Purchased: {purchaseCount}
+          </span>
+        </div>
+        <button
+          onClick={handlePurchase}
+          className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+        >
+          Purchase Now
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default FoodDetails;

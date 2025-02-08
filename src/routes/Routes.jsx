@@ -4,7 +4,8 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import Home from '../pages/Home/Home';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
-
+import AllFoods from '../pages/AllFoods/AllFoods';
+import FoodDetails from '../pages/FoodDetails/FoodDetails';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +23,16 @@ const router = createBrowserRouter([
       {
         path: '/signUp',
         element: <SignUp></SignUp>,
+      },
+      {
+        path: '/foods',
+        element: <AllFoods></AllFoods>,
+      },
+      {
+        path: '/food/:id',
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/food/${params.id}`),
+        element: <FoodDetails></FoodDetails>,
       },
     ],
   },
