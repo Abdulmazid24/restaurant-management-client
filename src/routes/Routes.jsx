@@ -8,6 +8,8 @@ import AllFoods from '../pages/AllFoods/AllFoods';
 import FoodDetails from '../pages/FoodDetails/FoodDetails';
 import FoodPurchasePage from '../pages/FoodPurchasePage/FoodPurchasePage';
 import GalleryPage from '../pages/GalleryPage/GalleryPage';
+import MyFoods from '../pages/MyFoods/MyFoods';
+import UpdateMyFood from '../pages/UpdateMyFood/UpdateMyFood';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: '/purchase/:id',
         element: <FoodPurchasePage></FoodPurchasePage>,
+      },
+      {
+        path: '/myfoods',
+        element: <MyFoods></MyFoods>,
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateMyFood></UpdateMyFood>,
       },
     ],
   },

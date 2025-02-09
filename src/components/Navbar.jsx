@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
@@ -33,6 +33,9 @@ const Navbar = () => {
       </NavLink>
       <NavLink to={'/gallery'}>
         <li>Gallery</li>
+      </NavLink>
+      <NavLink to={'/myfoods'}>
+        <li>My Foods</li>
       </NavLink>
     </>
   );

@@ -26,7 +26,7 @@ const AllFoods = () => {
     <div className="min-h-screen bg-gray-100 mt-3">
       {/* Page Title */}
       <div
-        className="relative h-[250px] bg-cover bg-center flex justify-center items-center  text-6xl font-bold text-white"
+        className="relative h-[300px] bg-no-repeat bg-cover bg-center flex justify-center items-center  text-6xl font-bold text-white"
         style={{ backgroundImage: "url('/public/different_foods.jpg')" }}
       >
         <Marquee> 🍕 All Foods below , Please choose your favorite.🍔 </Marquee>

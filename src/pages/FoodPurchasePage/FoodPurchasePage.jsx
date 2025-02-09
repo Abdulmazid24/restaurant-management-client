@@ -22,10 +22,12 @@ const FoodPurchasePage = () => {
     const order = {
       foodId: id,
       foodName: food.name,
+      image: food.image,
       price: food.price * quantity,
       quantity,
       buyerName: user.displayName,
       buyerEmail: user.email,
+      description: food.description,
       date: new Date().toISOString(), // Store purchase date
     };
 
@@ -53,6 +55,13 @@ const FoodPurchasePage = () => {
       >
         <h2 className="text-2xl font-bold mb-4">Purchase {food.name}</h2>
 
+        <label className="block font-semibold mb-2">Food Img Url</label>
+        <input
+          type="url"
+          value={food.image}
+          readOnly
+          className="input input-bordered w-full mb-4 placeholder: font-medium"
+        />
         <label className="block font-semibold mb-2">Food Name</label>
         <input
           type="text"
@@ -93,7 +102,13 @@ const FoodPurchasePage = () => {
           readOnly
           className="input input-bordered w-full mb-4 placeholder: font-medium"
         />
-
+        <textarea
+          name="description"
+          value={food?.description}
+          placeholder="Description"
+          className="w-full p-2 border rounded-lg"
+          required
+        ></textarea>
         <button type="submit" className="btn btn-primary w-full">
           Purchase
         </button>
