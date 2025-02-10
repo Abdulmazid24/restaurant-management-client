@@ -23,7 +23,7 @@ const AllFoods = () => {
   // );
 
   return (
-    <div className="min-h-screen bg-gray-100 mt-3">
+    <div className="min-h-screen bg-gray-100">
       {/* Page Title */}
       <div
         className="relative h-[300px] bg-no-repeat bg-cover bg-center flex justify-center items-center  text-6xl font-bold text-white"
@@ -33,7 +33,7 @@ const AllFoods = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="flex justify-center my-5">
+      <div className="flex justify-center">
         <div className="relative w-80">
           <input
             type="text"
@@ -68,7 +68,7 @@ const AllFoods = () => {
                 </span>
                 <Link
                   to={`/foods/${food._id}`}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
+                  className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-md hover:bg-blue-600"
                 >
                   Details
                 </Link>

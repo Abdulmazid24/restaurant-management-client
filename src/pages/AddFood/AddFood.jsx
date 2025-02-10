@@ -127,10 +127,13 @@ const AddFood = () => {
           placeholder="Short Description"
           value={foodData.description}
           onChange={handleChange}
-          className="textarea textarea-bordered col-span-2"
+          className="textarea textarea-bordered col-span-2 w-full"
           required
         ></textarea>
-        <button type="submit" className="btn btn-primary col-span-2">
+        <button
+          type="submit"
+          className="btn bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold col-span-2"
+        >
           Add Item
         </button>
       </form>

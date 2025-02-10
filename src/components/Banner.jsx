@@ -24,12 +24,9 @@ const Banner = () => {
         <SwiperSlide>
           <div
             className="relative w-full h-full flex items-center justify-center bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://i.ibb.co.com/FkRtDC1J/banner-1.webp')",
-            }}
+            style={{ backgroundImage: "url('/different_foods.jpg')" }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0"></div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -57,12 +54,9 @@ const Banner = () => {
         <SwiperSlide>
           <div
             className="relative w-full h-full flex items-center justify-center bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://source.unsplash.com/1600x900/?burger,pizza')",
-            }}
+            style={{ backgroundImage: "url('/burger-pizza.jpg')" }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0"></div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -90,12 +84,9 @@ const Banner = () => {
         <SwiperSlide>
           <div
             className="relative w-full h-full flex items-center justify-center bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://source.unsplash.com/1600x900/?healthy,salad')",
-            }}
+            style={{ backgroundImage: "url('/healthy.jpg')" }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div className="absolute inset-0"></div>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}

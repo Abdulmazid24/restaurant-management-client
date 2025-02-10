@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../context/AuthContext';
 import { FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const MyFoodsPage = () => {
   const { user } = useContext(AuthContext);
@@ -35,11 +36,13 @@ const MyFoodsPage = () => {
               <h2 className="text-xl font-semibold">{food.foodName}</h2>
               <p className="text-gray-600">Price: ${food.price}</p>
               <p className="text-gray-600">Description: ${food.description}</p>
-              <p className="text-gray-600">Date: {food.date}</p>
+              <p className="text-gray-600">
+                Date: {moment(food.date).format('MMMM Do YYYY, h:mm A')}
+              </p>
               <div className="flex justify-between items-center">
                 <Link
                   to={`/update/${food._id}`}
-                  className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                  className="mt-2 w-full text-center font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded hover:bg-blue-600"
                 >
                   ✏️ Update
                 </Link>
