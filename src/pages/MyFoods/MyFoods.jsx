@@ -1,9 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-
 import AuthContext from '../../context/AuthContext';
 import { FaTrash } from 'react-icons/fa';
-import axios from 'axios';
-import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 
 const MyFoodsPage = () => {
@@ -20,18 +17,6 @@ const MyFoodsPage = () => {
       .catch(error => console.error('Error fetching foods:', error));
   }, [user]);
 
-  const handleDelete = async id => {
-    try {
-      const { data } = await axios.delete(
-        `${import.meta.env.VITE_API_URL}/myfood/${id}`
-      );
-      console.log(data);
-      toast.success('order deleted successfully');
-    } catch (error) {
-      console.log(error);
-      toast.error('error.message');
-    }
-  };
   return (
     <div className="min-h-screen bg-gray-100 p-10">
       <h1 className="text-3xl font-bold text-center mb-6">🍽️ My Foods</h1>
@@ -58,13 +43,6 @@ const MyFoodsPage = () => {
                 >
                   ✏️ Update
                 </Link>
-                <button
-                  onClick={() => handleDelete(food._id)}
-                  className=" flex items-center gap-1 mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                >
-                  <FaTrash size={18} />
-                  Delete
-                </button>
               </div>
             </div>
           ))}

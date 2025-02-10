@@ -10,6 +10,8 @@ import FoodPurchasePage from '../pages/FoodPurchasePage/FoodPurchasePage';
 import GalleryPage from '../pages/GalleryPage/GalleryPage';
 import MyFoods from '../pages/MyFoods/MyFoods';
 import UpdateMyFood from '../pages/UpdateMyFood/UpdateMyFood';
+import AddFood from '../pages/AddFood/AddFood';
+import MyOrders from '../pages/MyOrders/MyOrders';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <UpdateMyFood></UpdateMyFood>,
+      },
+      {
+        path: '/addFood',
+        element: <AddFood></AddFood>,
+      },
+      {
+        path: '/my-orders',
+        element: <MyOrders></MyOrders>,
       },
     ],
   },

@@ -18,9 +18,9 @@ const AllFoods = () => {
   }, []);
 
   // Search functionality
-  const filteredFoods = foods.filter(food =>
-    food.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // const filteredFoods = foods.filter(food =>
+  //   food.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   return (
     <div className="min-h-screen bg-gray-100 mt-3">
@@ -48,8 +48,8 @@ const AllFoods = () => {
 
       {/* Food Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-10 py-6">
-        {filteredFoods.length > 0 ? (
-          filteredFoods.map(food => (
+        {foods.length > 0 ? (
+          foods.map(food => (
             <motion.div
               key={food._id}
               className="bg-white p-4 rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-300"

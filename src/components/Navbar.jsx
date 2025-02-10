@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
-        toast.success('Food added successfully!', {
+        toast.success('Logged Out successfully!', {
           style: {
             background: 'black',
             color: 'white',
@@ -36,6 +36,12 @@ const Navbar = () => {
       </NavLink>
       <NavLink to={'/myfoods'}>
         <li>My Foods</li>
+      </NavLink>
+      <NavLink to={'/addFood'}>
+        <li>Add Food</li>
+      </NavLink>
+      <NavLink to={'/my-orders'}>
+        <li>My Orders</li>
       </NavLink>
     </>
   );
