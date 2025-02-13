@@ -42,7 +42,10 @@ const MovingText = () => {
     <div className="   flex flex-col items-center py-10">
       <div className="relative w-full max-w-lg flex flex-col items-center space-y-4 text-white">
         {menuItems.map((item, index) => (
-          <div className=" moving-content bg-gray-800 p-4 rounded-lg shadow-lg w-72 flex items-center gap-4 border border-gray-700">
+          <div
+            key={item.id}
+            className=" moving-content bg-gray-800 p-4 rounded-lg shadow-lg w-72 flex items-center gap-4 border border-gray-700"
+          >
             <img
               src={item.image}
               alt={item.name}

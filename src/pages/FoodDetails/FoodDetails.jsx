@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 const FoodDetails = () => {
   const { id } = useParams();
@@ -8,10 +7,7 @@ const FoodDetails = () => {
   const food = useLoaderData();
   console.log(food);
   const navigate = useNavigate();
-  const [purchaseCount, setPurchaseCount] = useState(0);
   const handlePurchase = () => {
-    setPurchaseCount(purchaseCount + 1);
-
     navigate(`/purchase/${food._id}`); // Redirect to purchase page
   };
   // http://localhost:5173/food/67a62f9542c8c857e1fc5c47
@@ -37,18 +33,22 @@ const FoodDetails = () => {
         <p className="text-gray-600 mt-2">{food.description}</p>
         <div className="flex justify-between items-center mt-4">
           <span className="text-xl font-semibold text-gray-800">
+            Origin: {food.origin}
+          </span>
+          <span className="text-gray-500">Quantity : {food.quantity}</span>
+        </div>
+        <div className="flex justify-between items-center mt-4">
+          <span className="text-xl font-semibold text-gray-800">
             Price: ${food.price}
           </span>
-          <span className="text-gray-500">Available: {food.quantity}</span>
-        </div>
-        <div className="mt-4">
-          <span className="text-gray-700 font-semibold">
-            Purchased: {purchaseCount}
+          <span className="text-gray-500">
+            PurchaseCount : {food.purchaseCount}
           </span>
         </div>
+
         <button
           onClick={handlePurchase}
-          className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+          className="mt-4 px-6 py-2 bg-gradient-to-r from-pink-950 to-purple-600 text-white font-semibold rounded-lg transition cursor-pointer"
         >
           Purchase Now
         </button>

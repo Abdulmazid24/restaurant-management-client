@@ -28,7 +28,8 @@ const FoodPurchasePage = () => {
       buyerName: user.displayName,
       buyerEmail: user.email,
       description: food.description,
-      date: new Date().toISOString(), // Store purchase date
+      date: new Date().toISOString(),
+      purchaseCount: 0,
     };
 
     const res = await fetch('http://localhost:5000/purchase', {
@@ -109,7 +110,10 @@ const FoodPurchasePage = () => {
           className="w-full p-2 border rounded-lg"
           required
         ></textarea>
-        <button type="submit" className="btn btn-primary w-full">
+        <button
+          type="submit"
+          className="btn bg-gradient-to-r from-pink-950 to-purple-600 w-full text-white"
+        >
           Purchase
         </button>
       </form>

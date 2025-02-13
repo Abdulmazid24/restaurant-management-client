@@ -19,9 +19,7 @@ const Footer = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl font-bold text-yellow-400">
-              Restaurant Name
-            </h2>
+            <h2 className="text-2xl font-bold text-yellow-400">SmartDine</h2>
             <p className="mt-2 text-gray-400">
               Delicious food, delivered with love.
             </p>

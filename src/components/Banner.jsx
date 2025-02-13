@@ -41,8 +41,8 @@ const Banner = () => {
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                onClick={() => navigate('/all-foods')}
-                className="mt-6 bg-yellow-500 text-gray-900 px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                onClick={() => navigate('foods')}
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 Explore Our Menu
               </motion.button>
@@ -71,8 +71,8 @@ const Banner = () => {
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                onClick={() => navigate('/all-foods')}
-                className="mt-6 bg-yellow-500 text-gray-900 px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                onClick={() => navigate('foods')}
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 View All Dishes
               </motion.button>
@@ -101,8 +101,8 @@ const Banner = () => {
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                onClick={() => navigate('/all-foods')}
-                className="mt-6 bg-yellow-500 text-gray-900 px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                onClick={() => navigate('foods')}
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600  text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 Check Our Specials
               </motion.button>

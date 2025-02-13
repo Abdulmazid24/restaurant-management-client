@@ -3,6 +3,7 @@ import AuthContext from '../../context/AuthContext';
 import { FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
+import Marquee from 'react-fast-marquee';
 
 const MyFoodsPage = () => {
   const { user } = useContext(AuthContext);
@@ -20,7 +21,9 @@ const MyFoodsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-10">
-      <h1 className="text-3xl font-bold text-center mb-6">🍽️ My Foods</h1>
+      <h1 className="text-3xl font-bold text-center mb-6 py-1 bg-gradient-to-r from-yellow-500 to-purple-600">
+        <Marquee> 🍽️ My Foods </Marquee>
+      </h1>
 
       {foods.length === 0 ? (
         <p className="text-center text-gray-600">No foods added yet.</p>
@@ -34,10 +37,14 @@ const MyFoodsPage = () => {
                 className="w-full h-40 object-cover rounded-md mb-3"
               />
               <h2 className="text-xl font-semibold">{food.foodName}</h2>
-              <p className="text-gray-600">Price: ${food.price}</p>
-              <p className="text-gray-600">Description: ${food.description}</p>
-              <p className="text-gray-600">
-                Date: {moment(food.date).format('MMMM Do YYYY, h:mm A')}
+              <p className="text-gray-950 font-thin text-lg">
+                Price: ${food.price}
+              </p>
+              <p className="text-gray-950 text-sm font-medium">
+                {food.description}
+              </p>
+              <p className="text-gray-950 font-thin">
+                Order date : {moment(food.date).format('MMMM Do YYYY, h:mm A')}
               </p>
               <div className="flex justify-between items-center">
                 <Link

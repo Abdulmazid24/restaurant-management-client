@@ -6,12 +6,12 @@ import { FaFacebook } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import auth from '../firebase/firebase.config';
 import AuthContext from '../context/AuthContext';
 
 const Login = () => {
-  const { signInUser, setUser, signInWithGoogle } = useContext(AuthContext);
+  const { signInUser, setUser } = useContext(AuthContext);
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -26,10 +26,12 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         setUser(result.user);
+        form.reset('');
+        toast.success('Login Successfully');
         navigate(from);
       })
       .catch(error => {
-        console.log(error);
+        toast.error(error);
       });
   };
 
@@ -40,7 +42,7 @@ const Login = () => {
         const user = result.user;
         setUser(user);
         toast.success('Login successful!');
-        navigate(location?.state ? location.state : '/');
+        navigate(location.state ? location.state : '/');
       })
       .catch(error => {
         setErrorMessage(error.message);

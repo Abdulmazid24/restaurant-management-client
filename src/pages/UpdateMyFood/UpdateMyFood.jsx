@@ -70,46 +70,71 @@ const UpdateMyFood = () => {
       <div className="bg-white shadow-lg rounded-xl p-6 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-4">Update Food</h2>
         <form onSubmit={handleUpdate} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            defaultValue={food?.foodName}
-            placeholder="Food Name"
-            className="w-full p-2 border rounded-lg"
-            required
-          />
-          <input
-            type="number"
-            name="price"
-            defaultValue={food?.price}
-            placeholder="Price"
-            className="w-full p-2 border rounded-lg"
-            required
-          />
-          <input
-            type="number"
-            name="quantity"
-            min={1}
-            defaultValue={food?.quantity}
-            placeholder="quantity"
-            className="w-full p-2 border rounded-lg"
-            required
-          />
-          <input
-            type="text"
-            name="image"
-            defaultValue={food?.image}
-            placeholder="Image URL"
-            className="w-full p-2 border rounded-lg"
-            required
-          />
-          <textarea
-            name="description"
-            defaultValue={food?.description}
-            placeholder="Description"
-            className="w-full p-2 border rounded-lg"
-            required
-          ></textarea>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text font-semibold">Food name :</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              defaultValue={food?.foodName}
+              placeholder="Food Name"
+              className="w-full p-2 border rounded-lg"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text font-semibold">Price :</span>
+            </label>
+            <input
+              type="number"
+              name="price"
+              defaultValue={food?.description}
+              placeholder="Price"
+              className="w-full p-2 border rounded-lg"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text font-semibold">Quantity :</span>
+            </label>
+            <input
+              type="number"
+              name="quantity"
+              min={1}
+              defaultValue={food?.quantity}
+              placeholder="quantity"
+              className="w-full p-2 border rounded-lg"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text font-semibold">Image URL :</span>
+            </label>
+            <input
+              type="text"
+              name="image"
+              defaultValue={food?.image}
+              placeholder="Image URL"
+              className="w-full p-2 border rounded-lg"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text font-semibold">Food name :</span>
+            </label>
+            <textarea
+              name="description"
+              defaultValue={food?.description}
+              placeholder="Description"
+              className="w-full p-2 border rounded-lg"
+              required
+            ></textarea>
+          </div>
           <button
             type="submit"
             className="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition"

@@ -3,10 +3,14 @@ import registerLottieData from '../assets/lottie-react/register.json';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
+import { FiEyeOff } from 'react-icons/fi';
+import { FaEye } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, setUser } = useContext(AuthContext);
   const [error, setError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
   const handleRegister = e => {
     e.preventDefault();
     const form = e.target;
@@ -17,16 +21,22 @@ const SignUp = () => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
     if (!regex.test(password)) {
-      setError(
-        'Invalid password. Password must contain at least 6 characters, one number, one uppercase, and one lowercase letter.'
-      );
+      setTimeout(() => {
+        toast.success(
+          'Invalid password. Password must contain at least 6 characters, one number, one uppercase, and one lowercase letter.'
+        );
+      }, 1000);
     }
     createUser(email, password)
       .then(result => {
-        console.log(result.user);
+        setUser(result.user);
+        setTimeout(() => {
+          toast.success('Signup successful! 🎉');
+        }, 1000);
+        form.reset('');
       })
       .catch(error => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
   return (
@@ -52,6 +62,19 @@ const SignUp = () => {
                 type="text"
                 name="name"
                 placeholder="John Doe"
+                required
+                className="input input-bordered input-primary w-full"
+              />
+            </div>
+            <div className="form-control mb-4">
+              <label className="label">
+                <span className="label-text font-semibold">Photo URL</span>
+              </label>
+              <input
+                type="url"
+                name="photo"
+                required
+                placeholder="Enter your Photo URL"
                 className="input input-bordered input-primary w-full"
               />
             </div>
@@ -62,32 +85,29 @@ const SignUp = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="example@email.com"
+                placeholder="Enter your Email"
+                required
                 className="input input-bordered input-primary w-full"
               />
             </div>
-            <div className="form-control mb-4">
+            <div className="relative  form-control mb-4">
               <label className="label">
-                <span className="label-text font-semibold">Password</span>
+                <span className="label-text font-semibold mb-1">Password</span>
               </label>
               <input
-                type="password"
-                placeholder="********"
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Enter your password"
                 name="password"
+                required
                 className="input input-bordered input-primary w-full"
               />
-            </div>
-            <div className="form-control mb-4">
-              <label className="label">
-                <span className="label-text font-semibold">
-                  Confirm Password
-                </span>
-              </label>
-              <input
-                type="password"
-                placeholder="********"
-                className="input input-bordered input-primary w-full"
-              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-2 bottom-[4px] transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              >
+                {showPassword ? <FiEyeOff size={20} /> : <FaEye size={20} />}
+              </button>
             </div>
             <div className="form-control mb-6">
               <label className="cursor-pointer flex items-center">
@@ -101,15 +121,15 @@ const SignUp = () => {
                 </span>
               </label>
             </div>
-            <button className="btn btn-primary w-full mb-4 font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <button className="btn text-white w-full mb-4 font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
               Register
             </button>
           </form>
           {error && <p className="font-thin text-red-700">{error}</p>}
           <p className="text-sm text-center">
             Already have an account?{' '}
-            <Link to="/signIn" className="text-indigo-600 underline">
-              Sign In
+            <Link to="/login" className="text-indigo-600 underline">
+              Login
             </Link>
           </p>
         </div>
