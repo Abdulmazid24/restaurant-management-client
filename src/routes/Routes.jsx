@@ -13,6 +13,9 @@ import UpdateMyFood from '../pages/UpdateMyFood/UpdateMyFood';
 import AddFood from '../pages/AddFood/AddFood';
 import MyOrders from '../pages/MyOrders/MyOrders';
 import PrivateRoute from './PrivateRoute';
+import PizzaBlog from '../pages/Blogs/PizzaBlog';
+import SushiBlog from '../pages/Blogs/SushiBlog';
+import IndianSpicesBlog from '../pages/Blogs/IndianSpicesBlog';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -80,6 +83,18 @@ const router = createBrowserRouter([
             <MyOrders></MyOrders>
           </PrivateRoute>
         ),
+      },
+      {
+        path: '/pizza',
+        element: <PizzaBlog></PizzaBlog>,
+      },
+      {
+        path: '/sushi',
+        element: <SushiBlog></SushiBlog>,
+      },
+      {
+        path: '/spices',
+        element: <IndianSpicesBlog></IndianSpicesBlog>,
       },
     ],
   },

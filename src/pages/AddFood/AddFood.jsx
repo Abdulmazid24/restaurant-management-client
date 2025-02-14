@@ -36,7 +36,7 @@ const AddFood = () => {
           category: '',
           quantity: '',
           price: '',
-          addedBy: user?.displayName || '',
+          addedBy: user?.displayName || 'Added By',
           email: user?.email || '',
           origin: '',
           description: '',

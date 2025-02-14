@@ -43,7 +43,6 @@ const MyOrders = () => {
               <th>Food Image</th>
               <th>Food Name</th>
               <th>Price</th>
-              <th>Food Owner</th>
               <th>Order Date</th>
               <th>Action</th>
             </tr>
@@ -53,21 +52,21 @@ const MyOrders = () => {
               <tr key={order._id}>
                 <td>
                   <img
-                    src={order.foodImage}
+                    src={order.image}
                     alt={order.foodName}
                     className="w-16 h-16 rounded"
                   />
                 </td>
                 <td>{order.foodName}</td>
                 <td>${order.price}</td>
-                <td>{order.foodOwner}</td>
+
                 <td>
                   {moment(order.orderDate).format('MMMM Do YYYY, h:mm A')}
                 </td>
                 <td>
                   <button
                     onClick={() => handleDelete(order._id)}
-                    className="btn btn-sm btn-error"
+                    className="btn font-medium btn-error"
                   >
                     Delete
                   </button>

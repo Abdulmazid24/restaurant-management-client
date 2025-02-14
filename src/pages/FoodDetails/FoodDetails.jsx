@@ -3,6 +3,7 @@ import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
 
 const FoodDetails = () => {
   const { id } = useParams();
+
   console.log(id);
   const food = useLoaderData();
   console.log(food);
@@ -10,7 +11,6 @@ const FoodDetails = () => {
   const handlePurchase = () => {
     navigate(`/purchase/${food._id}`); // Redirect to purchase page
   };
-  // http://localhost:5173/food/67a62f9542c8c857e1fc5c47
 
   // Handle case where food item is not found
   if (!food) {
