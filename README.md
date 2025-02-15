@@ -5,7 +5,7 @@ user authentication, and order management.
 
 ## 🌐 Live Demo
 
-🔗 [Live Site](https://your-live-site-link.com)
+🔗 [Live Site](https://restaurant-management-c4c23.web.app)
 
 ## 📂 GitHub Repositories
 

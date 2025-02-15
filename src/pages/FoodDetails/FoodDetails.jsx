@@ -4,9 +4,8 @@ import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
 const FoodDetails = () => {
   const { id } = useParams();
 
-  console.log(id);
   const food = useLoaderData();
-  console.log(food);
+
   const navigate = useNavigate();
   const handlePurchase = () => {
     navigate(`/purchase/${food._id}`); // Redirect to purchase page

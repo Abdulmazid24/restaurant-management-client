@@ -9,7 +9,6 @@ const MyFoodsPage = () => {
   const { user } = useContext(AuthContext);
   const [foods, setFoods] = useState([]);
 
-  console.log(foods);
   // Fetch foods added by the logged-in user
 
   useEffect(() => {
