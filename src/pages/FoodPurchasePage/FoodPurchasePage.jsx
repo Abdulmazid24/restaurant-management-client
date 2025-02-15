@@ -21,7 +21,7 @@ const FoodPurchasePage = () => {
     e.preventDefault();
     const order = {
       foodId: id,
-      foodName: food.name,
+      name: food.name,
       image: food.image,
       price: food.price * quantity,
       quantity,
@@ -32,7 +32,7 @@ const FoodPurchasePage = () => {
       purchaseCount: 0,
     };
 
-    const res = await fetch('http://localhost:5000/purchase', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/purchase`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(order),
@@ -107,6 +107,7 @@ const FoodPurchasePage = () => {
           name="description"
           value={food?.description}
           placeholder="Description"
+          readOnly
           className="w-full p-2 border rounded-lg"
           required
         ></textarea>

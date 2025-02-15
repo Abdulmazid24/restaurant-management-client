@@ -3,8 +3,9 @@ import axios from 'axios';
 import AuthContext from '../../context/AuthContext';
 import { toast } from 'react-toastify';
 
-const AddFood = () => {
-  const { user } = useContext(AuthContext);
+const AddFood = ({ fetchFoods }) => {
+  const { user } = useContext(AuthContext) || {}; // Ensure no crash if AuthContext is undefined
+
   const [foodData, setFoodData] = useState({
     name: '',
     image: '',
@@ -15,6 +16,7 @@ const AddFood = () => {
     email: user?.email || '',
     origin: '',
     description: '',
+    purchaseCount: 0,
   });
 
   const handleChange = e => {
@@ -25,21 +27,28 @@ const AddFood = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${import.meta.env.VITE_API_URL}/foods`,
+        `${import.meta.env.VITE_API_URL}/add-foods`,
         foodData
       );
       if (data.insertedId) {
         toast.success('Food item added successfully!');
+
+        if (fetchFoods) {
+          // Ensure function exists
+          fetchFoods();
+        }
+
         setFoodData({
-          foodName: '',
-          foodImage: '',
+          name: '',
+          image: '',
           category: '',
           quantity: '',
           price: '',
-          addedBy: user?.displayName || 'Added By',
+          addedBy: user?.displayName || '',
           email: user?.email || '',
           origin: '',
           description: '',
+          purchaseCount: 0,
         });
       }
     } catch (error) {
@@ -56,18 +65,18 @@ const AddFood = () => {
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
         <input
           type="text"
-          name="foodName"
+          name="name"
           placeholder="Food Name"
-          value={foodData.foodName}
+          value={foodData.name}
           onChange={handleChange}
           className="input input-bordered w-full"
           required
         />
         <input
           type="text"
-          name="foodImage"
+          name="image"
           placeholder="Image URL"
-          value={foodData.foodImage}
+          value={foodData.image}
           onChange={handleChange}
           className="input input-bordered w-full"
           required
@@ -119,6 +128,14 @@ const AddFood = () => {
           type="email"
           name="email"
           value={foodData.email}
+          className="input input-bordered w-full"
+          readOnly
+        />
+        <input
+          type="number"
+          name="purchaseCount"
+          placeholder="Purchase Count : 0"
+          value={foodData.purchaseCount}
           className="input input-bordered w-full"
           readOnly
         />

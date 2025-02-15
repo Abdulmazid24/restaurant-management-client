@@ -49,7 +49,7 @@ const Navbar = () => {
                   <Link to="/myfoods">My Foods</Link>
                 </li>
                 <li className="px-4 py-2 hover:bg-gradient-to-r from-pink-950 to-purple-600 hover:p-2 rounded-md hover:text-white cursor-pointer">
-                  <Link to="/addFood">Add Food</Link>
+                  <Link to="/add-foods">Add Food</Link>
                 </li>
                 <li className="px-4 py-2  hover:bg-gradient-to-r from-pink-950 to-purple-600 hover:p-2 rounded-md hover:text-white cursor-pointer">
                   <Link to="/my-orders">My Orders</Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="hover:bg-gradient-to-r from-pink-950 to-purple-600 hover:p-2 rounded-md hover:text-white cursor-pointer">
-                  <Link to="/addFood" onClick={toggleMenu}>
+                  <Link to="/add-foods" onClick={toggleMenu}>
                     Add Food
                   </Link>
                 </li>

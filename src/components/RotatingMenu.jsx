@@ -38,7 +38,7 @@ const RotatingMenu = () => {
           </h2>
         </Marquee>
       </div>
-      <section className="flex justify-around">
+      <section className="mx auto md:flex justify-between">
         <div>
           <MovingText></MovingText>
         </div>

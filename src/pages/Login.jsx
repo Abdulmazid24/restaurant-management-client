@@ -15,7 +15,7 @@ const Login = () => {
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
-  const from = location.state || '/';
+
   const handleSignIn = e => {
     e.preventDefault();
     const form = e.target;
@@ -28,7 +28,7 @@ const Login = () => {
         setUser(result.user);
         form.reset('');
         toast.success('Login Successfully');
-        navigate(from);
+        navigate(location.state ? location.state : '/');
       })
       .catch(error => {
         toast.error(error);

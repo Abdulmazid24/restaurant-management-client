@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import gsap from 'gsap';
-import { motion } from 'framer-motion';
 const MovingText = () => {
   useEffect(() => {
     gsap.to('.moving-content', {

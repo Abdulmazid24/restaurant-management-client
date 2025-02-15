@@ -18,7 +18,7 @@ const Banner = () => {
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
-        className="w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden"
+        className="w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[600px] xl:h-[650px] rounded-lg overflow-hidden"
       >
         {/* Slide 1 */}
         <SwiperSlide>
@@ -31,18 +31,18 @@ const Banner = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white z-10 px-4"
+              className="text-center text-white z-10 px-4 sm:px-6 md:px-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                 Delicious Meals Await You
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-200">
+              <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200">
                 Experience mouth-watering dishes made with fresh ingredients.
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 onClick={() => navigate('foods')}
-                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-sm sm:text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 Explore Our Menu
               </motion.button>
@@ -61,18 +61,18 @@ const Banner = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white z-10 px-4"
+              className="text-center text-white z-10 px-4 sm:px-6 md:px-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                 Taste the Best Burgers & Pizzas
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-200">
+              <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200">
                 Crispy, cheesy, and full of flavor. Just what you need!
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 onClick={() => navigate('foods')}
-                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-sm sm:text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 View All Dishes
               </motion.button>
@@ -91,18 +91,18 @@ const Banner = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white z-10 px-4"
+              className="text-center text-white z-10 px-4 sm:px-6 md:px-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
                 Healthy & Organic Food
               </h1>
-              <p className="mt-4 text-lg md:text-xl text-gray-200">
+              <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200">
                 Fresh, natural, and nutritious meals for a healthy lifestyle.
               </p>
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 onClick={() => navigate('foods')}
-                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600  text-white px-6 py-3 text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
+                className="mt-6 bg-gradient-to-r from-pink-950 to-purple-600 text-white px-6 py-3 text-sm sm:text-lg font-semibold rounded-lg hover:bg-yellow-600 transition-all"
               >
                 Check Our Specials
               </motion.button>

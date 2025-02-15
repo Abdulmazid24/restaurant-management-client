@@ -44,7 +44,7 @@ const MyFoodsPage = () => {
                 {food.description}
               </p>
               <p className="text-gray-950 font-thin">
-                Order date : {moment(food.date).format('MMMM Do YYYY, h:mm A')}
+                date : {moment(food.date).format('MMMM Do YYYY, h:mm A')}
               </p>
               <div className="flex justify-between items-center">
                 <Link
